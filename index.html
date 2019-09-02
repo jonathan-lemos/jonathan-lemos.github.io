@@ -8,17 +8,34 @@
     <title>Title</title>
 </head>
 <body class="p-0 m-0 h-100">
-<div class="flex-row w-100 bg-container site-section">
+<div class="f-col bg-container site-section">
     <div class="bg bg-anime"></div>
     <div class="bg bg-gradient"></div>
-    <div class="bold-ultra font-mono font-size-4vw flex-row">
-        <h1 class="color-red">$&nbsp;</h1>
-        <h1 class="color-green">jonathan_lemos</h1>
-        <h1 class="color-green blink">_</h1>
+    <div class="f-grow"></div>
+    <div id="ls-command" class="f-row text-bold-ultra text-mono text-size-4vw glitch">
+        <h1 class="text-blue pre">$ ls </h1>
+        <h1 class="text-green">jonathan</h1>
+        <h1 class="text-blue">_</h1>
+        <h1 class="text-green">lemos</h1>
+        <h1 class="text-blue">/</h1>
     </div>
+    <div id="ls-output" class="f-row f-wrap f-wrap f-space-between text-bold text-mono text-white text-size-3vw w-60">
+        <a href="#section-about" id="anchor-about" class="hover-red">About</a>
+        <a id="anchor-contact">Contact</a>
+        <a id="anchor-resume">Resume</a>
+        <a id="anchor-skills">Skills</a>
+    </div>
+    <div id="shell" class="f-row text-bold-ultra text-mono text-size-4vw">
+        <h1 class="text-blue">$&nbsp;</h1>
+        <h1 id="shell-input" class="text-blue pre"></h1>
+        <h1 class="text-blue blink">_</h1>
+    </div>
+    <div class="f-grow"></div>
 </div>
-<div class="flex-row w-100 site-section">
+<div id="section-about" class="f-col w-100 site-section">
     <h1>test</h1>
 </div>
+<!-- script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script -->
+<script src="script.js"></script>
 </body>
 </html>
