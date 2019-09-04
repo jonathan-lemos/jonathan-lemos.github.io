@@ -8,7 +8,7 @@
     <title>Title</title>
 </head>
 <body class="p-0 m-0 h-100">
-<div class="f-col bg-container site-section">
+<main id="main" class="f-col bg-container h-min-100vh">
     <div class="bg bg-anime"></div>
     <div class="bg bg-gradient"></div>
     <div class="f-grow"></div>
@@ -19,22 +19,51 @@
         <h1 class="text-green">lemos</h1>
         <h1 class="text-blue">/</h1>
     </div>
-    <div id="ls-output" class="f-row f-wrap f-wrap f-space-between text-bold text-mono text-white text-size-3vw w-60">
-        <a href="#section-about" id="anchor-about" class="hover-red">About</a>
-        <a id="anchor-contact">Contact</a>
-        <a id="anchor-resume">Resume</a>
-        <a id="anchor-skills">Skills</a>
-    </div>
+    <table id="ls-output" class="w-60 text-mono text-white text-size-2-5vw text-bold-ultra">
+        <tr>
+            <td><a href="#about" id="anchor-about" class="hover-red">about</a></td>
+            <td><a href="#" id="anchor-contact" class="hover-red">contact</a></td>
+            <td><a href="#" id="anchor-experience" class="hover-red">experience</a></td>
+        </tr>
+        <tr>
+            <td><a href="#" id="anchor-projects" class="hover-red">projects</a></td>
+            <td><a href="resume.pdf" id="anchor-resume" class="hover-red" download>resume</a></td>
+            <td><a href="#skills" id="anchor-skills" class="hover-red">skills</a></td>
+        </tr>
+    </table>
     <div id="shell" class="f-row text-bold-ultra text-mono text-size-4vw">
         <h1 class="text-blue">$&nbsp;</h1>
         <h1 id="shell-input" class="text-blue pre"></h1>
         <h1 class="text-blue blink">_</h1>
     </div>
     <div class="f-grow"></div>
-</div>
-<div id="section-about" class="f-col w-100 site-section">
-    <h1>test</h1>
-</div>
+</main>
+<nav id="navbar" class="navbar pb-4 text-mono">
+    <a href="#main">/home</a>
+    <a href="#about" class="active">about</a>
+    <a href="#">contact</a>
+    <a href="#">experience</a>
+    <a href="#">projects</a>
+    <a href="#">resume</a>
+    <a href="#skills" class="active">skills</a>
+</nav>
+<section id="about" class="f-col w-100 bg-white">
+    <div class="section f-col w-100">
+        <a href="#about" class="my-2 title text-mono">about me</a>
+        <p class="text-size-p">
+            I write code. What more is there to say?
+        </p>
+    </div>
+</section>
+<section id="skills" class="w-100 bg-lightgray">
+    <div class="section f-col w-100">
+        <a href="#skills" class="my-2 title text-mono">skills</a>
+        <ul class="text-size-p">
+            <li>Yeet</li>
+            <li>Teey</li>
+        </ul>
+    </div>
+</section>
 <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script -->
 <script src="script.js"></script>
 </body>

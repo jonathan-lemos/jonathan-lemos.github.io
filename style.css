@@ -4,6 +4,7 @@
 }
 
 html {
+    background-color: #DDD;
     scroll-behavior: smooth;
 }
 
@@ -22,13 +23,13 @@ body {
     background-size: cover;
     content: "";
     display: block;
-    height: 100%;
+    height: 105vh;
     left: -0.5rem;
     overflow-x: hidden;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: -0.5rem;
-    width: 110vw;
+    width: 105vw;
     z-index: -1;
 }
 
@@ -53,11 +54,23 @@ body {
 }
 
 .bg-white {
-    background-color: #DDD
+    background-color: #DDD;
+}
+
+.bg-lightgray {
+    background-color: #CCC;
 }
 
 .blink {
     animation: anim-blink 1s infinite;
+}
+
+.f-align-start {
+    align-items: start !important;
+}
+
+.f-basis-0 {
+    flex-basis: 0;
 }
 
 .f-center {
@@ -94,6 +107,10 @@ body {
     justify-content: space-evenly;
 }
 
+.f-start {
+    justify-content: flex-start;
+}
+
 .f-wrap {
     flex-wrap: wrap;
 }
@@ -114,13 +131,16 @@ body {
     height: 100%;
 }
 
+.h-min-100vh {
+    min-height: 100vh;
+}
+
 .hover-red {
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
 .hover-red:hover {
     color: #EE6666;
-    /*animation: anim-hover-gradient 0.5s linear infinite;*/
 }
 
 .m-0 {
@@ -135,6 +155,79 @@ body {
     margin: 0.5em;
 }
 
+.my-0 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.my-1 {
+    margin-bottom: 0.25em;
+    margin-top: 0.25em;
+}
+
+.my-2 {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+nav.navbar {
+    align-items: center;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 4vw;
+    justify-content: space-evenly;
+    overflow: visible;
+    width: 100%;
+}
+
+nav.navbar a {
+    align-items: center;
+    color: #9999;
+    font-size: 2vw;
+    font-weight: 500;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+nav.navbar a:hover {
+    color: #F33;
+    font-size: 2.5vw;
+}
+
+nav.navbar a.active {
+    color: #EEE;
+    font-size: 2.5vw;
+    font-weight: 900;
+}
+
+nav.navbar a.active:hover {
+    color: #F33;
+}
+
+nav.navbar > div.lhs {
+    display: flex;
+    flex-basis: 0;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    overflow-x: hidden;
+}
+
+nav.navbar > div.rhs {
+    display: flex;
+    flex-basis: 0;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    justify-content: start;
+    overflow-x: hidden;
+}
+
 .p-0 {
     padding: 0;
 }
@@ -147,24 +240,37 @@ body {
     margin: 0.5em;
 }
 
+.pb-2 {
+    margin-bottom: 0.5em;
+}
+
+.pb-4 {
+    margin-bottom: 1em;
+}
+
+.pt-4 {
+    margin-top: 1em;
+}
+
+.pt-6 {
+    margin-top: 2em;
+}
+
+.py-2 {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
 .pre {
     white-space: pre;
 }
 
-.site-section {
-    min-height: 90vh;
+.section {
+    padding: 10vh 10vw;
 }
 
-.table {
-    display: table;
-}
-
-.table-tr {
-    display: table-row;
-}
-
-.table-td {
-    display: table-cell;
+table {
+    border: 0;
 }
 
 .text-black, .text-black * {
@@ -183,8 +289,12 @@ body {
     color: #68E;
 }
 
+.text-dark-red, .text-dark-red * {
+    color: #F33;
+}
+
 .text-green, .text-green * {
-    color: #6E6;
+    color: #5F5;
 }
 
 .text-mono, .text-mono * {
@@ -211,12 +321,24 @@ body {
     font-size: 2vw;
 }
 
+.text-size-2-5vw, .text-size-2-5vw * {
+    font-size: 2.5vw;
+}
+
 .text-size-3vw, .text-size-3vw * {
     font-size: 3vw;
 }
 
 .text-size-4vw, .text-size-4vw * {
     font-size: 4vw;
+}
+
+.text-size-p, .text-size-p * {
+    font-size: calc(0.75vw + 0.5rem);
+}
+
+.text-size-x1-5, .text-size-x1-5 * {
+    font-size: 150%;
 }
 
 .text-size-x2, .text-size-x2 * {
@@ -231,6 +353,29 @@ body {
     text-decoration: underline;
 }
 
+a.title {
+    align-items: center;
+    color: #333;
+    font-size: 2.5vw;
+    font-weight: 900;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a.title:hover {
+    color: #C33;
+}
+
+.w-33 {
+    width: 33%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
 .w-50 {
     width: 50%;
 }
@@ -239,24 +384,16 @@ body {
     width: 60%;
 }
 
+.w-67 {
+    width: 67%;
+}
+
 .w-75 {
     width: 75%;
 }
 
 .w-100 {
     width: 100%;
-}
-
-@keyframes anim-hover-gradient {
-    0% {
-        color: #E66;
-    }
-    50% {
-        color: #E6E;
-    }
-    100% {
-        color: #E66;
-    }
 }
 
 @keyframes anim-bg-gradient {
@@ -325,5 +462,17 @@ body {
     76% {
         transform: none;
         filter: none;
+    }
+}
+
+@keyframes anim-nav-gradient-bg {
+    0% {
+        background-color: #401D;
+    }
+    50% {
+        background-color: #104D;
+    }
+    100% {
+        background-color: #401D;
     }
 }
