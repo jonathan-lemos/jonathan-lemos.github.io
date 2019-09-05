@@ -1,59 +1,62 @@
-const byIdCache = {};
-const byId = e => {
-    if (e in byIdCache) {
-        return byIdCache[e];
-    }
-    byIdCache[e] = document.getElementById(e);
-    return byIdCache[e];
-};
-
 const doResize = () => {
-    const tw = byId("ls-command").offsetWidth;
-    byId("ls-output").style.width = tw + "px";
-    byId("shell").style.width = tw + "px";
+    const tw = $("#ls-command").width();
+    $("#ls-output").width(tw);
+    $("#shell").width(tw);
 };
 
-window.onresize = doResize;
-window.onload = doResize;
+const stickPos = $("#navbar").offset().top;
 
-window.onscroll = function () {
+$(window).on({
+    resize: doResize,
+    load: doResize,
+    scroll: function () {
+        if (window.pageYOffset >= stickPos) {
+            $("#navbar").addClass("sticky");
+        } else {
+            $("#navbar").removeClass("sticky");
+        }
 
-};
+        $("nav.navbar a.nav-link").each((i, elem) => {
+            if (elem.innerText === "/home") {
+                return;
+            }
+            const section = $(`#${elem.innerText} div.section-content`);
+            if (section.offset() == null) {
+                return;
+            }
+            if (section.offset().top < window.pageYOffset + window.innerHeight && section.offset().top + section.height() > window.pageYOffset) {
+                elem.classList.add("active");
+            } else {
+                elem.classList.remove("active");
+            }
+        });
+    }
+});
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const shellInputType = async text => {
     let i = 0;
-    byId("shell-input").innerText = "";
+    $("#shell-input").innerText = "";
     while (i < text.length) {
-        if (byId("shell-input").innerText !== text.substring(0, i)) {
+        if ($("#shell-input").innerText !== text.substring(0, i)) {
             break;
         }
 
-        byId("shell-input").innerText += text.charAt(i);
+        $("#shell-input").innerText += text.charAt(i);
         i++;
         await sleep(50);
     }
 };
 
 const shellInputBlank = () => {
-    byId("shell-input").innerText = "";
+    $("#shell-input").innerText = "";
 };
 
-byId("anchor-about").onmouseover = () => shellInputType("cd about/");
-byId("anchor-about").onmouseleave = shellInputBlank;
-
-byId("anchor-contact").onmouseover = () => shellInputType("ping jonathan");
-byId("anchor-contact").onmouseleave = shellInputBlank;
-
-byId("anchor-experience").onmouseover = () => shellInputType("history");
-byId("anchor-experience").onmouseleave = shellInputBlank;
-
-byId("anchor-projects").onmouseover = () => shellInputType("git clone projects");
-byId("anchor-projects").onmouseleave = shellInputBlank;
-
-byId("anchor-resume").onmouseover = () => shellInputType("curl resume.pdf");
-byId("anchor-resume").onmouseleave = shellInputBlank;
-
-byId("anchor-skills").onmouseover = () => shellInputType("cat skills");
-byId("anchor-skills").onmouseleave = shellInputBlank;
+$("#anchor-about").onmouseover = () => shellInputType("cd about/");
+$("#anchor-contact").onmouseover = () => shellInputType("ping jonathan");
+$("#anchor-experience").onmouseover = () => shellInputType("history");
+$("#anchor-projects").onmouseover = () => shellInputType("git clone projects");
+$("#anchor-resume").onmouseover = () => shellInputType("curl resume.pdf");
+$("#anchor-skills").onmouseover = () => shellInputType("cat skills");
+$("a.anchor").onmouseleave = shellInputBlank;

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display|Roboto+Mono&display=swap"
           rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+          type="text/css">
     <link href="style.css" rel="stylesheet">
     <title>Title</title>
 </head>
@@ -21,14 +23,15 @@
     </div>
     <table id="ls-output" class="w-60 text-mono text-white text-size-2-5vw text-bold-ultra">
         <tr>
-            <td><a href="#about" id="anchor-about" class="hover-red">about</a></td>
-            <td><a href="#" id="anchor-contact" class="hover-red">contact</a></td>
-            <td><a href="#" id="anchor-experience" class="hover-red">experience</a></td>
+            <td><a href="#about" id="anchor-about" class="anchor hover-red">about</a></td>
+            <td><a href="#" id="anchor-contact" class="anchor hover-red">contact</a></td>
+            <td><a href="#" id="anchor-experience" class="anchor hover-red">experience</a></td>
         </tr>
         <tr>
-            <td><a href="#" id="anchor-projects" class="hover-red">projects</a></td>
-            <td><a href="resume.pdf" id="anchor-resume" class="hover-red" download>resume</a></td>
-            <td><a href="#skills" id="anchor-skills" class="hover-red">skills</a></td>
+            <td><a href="#" id="anchor-projects" class="anchor hover-red">projects</a></td>
+            <td><a href="resume.pdf" id="anchor-resume" class="anchor hover-blue" download><i
+                    class="fa fa-download text-fa"></i>resume</a></td>
+            <td><a href="#skills" id="anchor-skills" class="anchor hover-red">skills</a></td>
         </tr>
     </table>
     <div id="shell" class="f-row text-bold-ultra text-mono text-size-4vw">
@@ -39,32 +42,69 @@
     <div class="f-grow"></div>
 </main>
 <nav id="navbar" class="navbar pb-4 text-mono">
-    <a href="#main">/home</a>
-    <a href="#about" class="active">about</a>
-    <a href="#">contact</a>
-    <a href="#">experience</a>
-    <a href="#">projects</a>
-    <a href="#">resume</a>
-    <a href="#skills" class="active">skills</a>
+    <a href="#main" class="nav-link">/home</a>
+    <a href="#about" class="nav-link">about</a>
+    <a href="#skills" class="nav-link">skills</a>
+    <a href="#experience" class="nav-link">experience</a>
+    <a href="#projects" class="nav-link">projects</a>
+    <a href="#" class="nav-link">contact</a>
+    <a href="resume.pdf" class="nav-link hover-blue"><i class="fa fa-download text-fa"></i>resume</a>
 </nav>
-<section id="about" class="f-col w-100 bg-white">
+<section id="about" class="f-col w-100 bg-site-1">
     <div class="section f-col w-100">
-        <a href="#about" class="my-2 title text-mono">about me</a>
-        <p class="text-size-p">
-            I write code. What more is there to say?
-        </p>
+        <div class="section-content f-col w-100">
+            <a href="#about" class="my-2 title text-mono">about me</a>
+            <p class="text-size-p">
+                I write code. What more is there to say?
+            </p>
+        </div>
     </div>
 </section>
-<section id="skills" class="w-100 bg-lightgray">
+<section id="skills" class="w-100 bg-site-2">
     <div class="section f-col w-100">
-        <a href="#skills" class="my-2 title text-mono">skills</a>
-        <ul class="text-size-p">
-            <li>Yeet</li>
-            <li>Teey</li>
-        </ul>
+        <div class="section-content f-col w-100">
+            <a href="#skills" class="my-2 title text-mono">skills</a>
+            <ul class="text-size-p">
+                <li>Yeet</li>
+                <li>Teey</li>
+            </ul>
+        </div>
     </div>
 </section>
-<!-- script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script -->
+<section id="experience" class="w-100 bg-site-2">
+    <div class="section f-col w-100">
+        <div class="section-content f-col w-100">
+            <a href="#experience" class="my-2 title text-mono">experience</a>
+            <ul class="text-size-p">
+                <li>Yeet</li>
+                <li>Teey</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section id="projects" class="w-100 bg-site-1">
+    <div class="section f-col w-100">
+        <div class="section-content f-col w-100">
+            <a href="#projects" class="my-2 title text-mono">projects</a>
+            <ul class="text-size-p">
+                <li>Yeet</li>
+                <li>Teey</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section id="contact" class="w-100 bg-site-1">
+    <div class="section f-col w-100">
+        <div class="section-content f-col w-100">
+            <a href="#contact" class="my-2 title text-mono">contact</a>
+            <ul class="text-size-p">
+                <li>Yeet</li>
+                <li>Teey</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

@@ -53,12 +53,12 @@ body {
     filter: blur(10px);
 }
 
-.bg-white {
-    background-color: #DDD;
+.bg-site-1 {
+    background-color: #FFFA;
 }
 
-.bg-lightgray {
-    background-color: #CCC;
+.bg-site-2 {
+    background-color: #EEEA;
 }
 
 .blink {
@@ -143,6 +143,14 @@ body {
     color: #EE6666;
 }
 
+.hover-blue, .hover-blue * {
+    transition: 0.5s;
+}
+
+.hover-blue:hover, .hover-blue *:hover {
+    color: #6699EE !important;
+}
+
 .m-0 {
     margin: 0;
 }
@@ -172,7 +180,6 @@ body {
 
 nav.navbar {
     align-items: center;
-    background: transparent;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -185,7 +192,7 @@ nav.navbar {
 nav.navbar a {
     align-items: center;
     color: #9999;
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 500;
     padding-left: 2vw;
     padding-right: 2vw;
@@ -195,12 +202,12 @@ nav.navbar a {
 
 nav.navbar a:hover {
     color: #F33;
-    font-size: 2.5vw;
+    font-size: 2vw;
 }
 
 nav.navbar a.active {
     color: #EEE;
-    font-size: 2.5vw;
+    font-size: 2vw;
     font-weight: 900;
 }
 
@@ -266,11 +273,30 @@ nav.navbar > div.rhs {
 }
 
 .section {
-    padding: 10vh 10vw;
+    height: 100%;
+    padding: 20vh 10vh 15vh;
+}
+
+.section .section * {
+
+}
+
+nav.sticky {
+    animation: anim-nav-gradient-bg 5s ease infinite;
+    position: fixed;
+    top: 0;
+}
+
+nav.sticky + * {
+    padding-top: 4vw;
 }
 
 table {
     border: 0;
+}
+
+.text-fa {
+    font-family: FontAwesome, monospace !important;
 }
 
 .text-black, .text-black * {
@@ -438,6 +464,11 @@ a.title:hover {
     }
 }
 
+@keyframes anim-fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
 @keyframes anim-glitch {
     70% {
         transform: none;
@@ -467,12 +498,12 @@ a.title:hover {
 
 @keyframes anim-nav-gradient-bg {
     0% {
-        background-color: #401D;
-    }
-    50% {
         background-color: #104D;
     }
-    100% {
+    50% {
         background-color: #401D;
+    }
+    100% {
+        background-color: #104D;
     }
 }
