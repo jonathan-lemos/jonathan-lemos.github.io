@@ -295,8 +295,8 @@ table {
     border: 0;
 }
 
-.text-fa {
-    font-family: FontAwesome, monospace !important;
+.text-fa, .text-fa * {
+    font-family: FontAwesome, 'Roboto Mono', monospace !important;
 }
 
 .text-black, .text-black * {

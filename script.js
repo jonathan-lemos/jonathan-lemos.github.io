@@ -24,7 +24,7 @@ $(window).on({
             if (section.offset() == null) {
                 return;
             }
-            if (section.offset().top < window.pageYOffset + window.innerHeight && section.offset().top + section.height() > window.pageYOffset) {
+            if (section.offset().top < window.pageYOffset + window.innerHeight && section.offset().top + section.height() > window.pageYOffset + $("#navbar").innerHeight()) {
                 elem.classList.add("active");
             } else {
                 elem.classList.remove("active");
