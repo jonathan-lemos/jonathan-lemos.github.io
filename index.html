@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display|Roboto+Mono&display=swap"
           rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
-          type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+          rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <title>Title</title>
 </head>
@@ -24,11 +24,11 @@
     <table id="ls-output" class="w-60 text-mono text-white text-size-2-5vw text-bold-ultra">
         <tr>
             <td><a href="#about" id="anchor-about" class="anchor hover-red">about</a></td>
-            <td><a href="#" id="anchor-contact" class="anchor hover-red">contact</a></td>
-            <td><a href="#" id="anchor-experience" class="anchor hover-red">experience</a></td>
+            <td><a href="#contact" id="anchor-contact" class="anchor hover-red">contact</a></td>
+            <td><a href="#experience" id="anchor-experience" class="anchor hover-red">experience</a></td>
         </tr>
         <tr>
-            <td><a href="#" id="anchor-projects" class="anchor hover-red">projects</a></td>
+            <td><a href="#projects" id="anchor-projects" class="anchor hover-red">projects</a></td>
             <td><a href="resume.pdf" id="anchor-resume" class="anchor hover-blue text-fa" download>resume</a></td>
             <td><a href="#skills" id="anchor-skills" class="anchor hover-red">skills</a></td>
         </tr>
@@ -46,14 +46,14 @@
     <a href="#skills" class="nav-link">skills</a>
     <a href="#experience" class="nav-link">experience</a>
     <a href="#projects" class="nav-link">projects</a>
-    <a href="#" class="nav-link">contact</a>
+    <a href="#contact" class="nav-link">contact</a>
     <a href="resume.pdf" class="nav-link hover-blue text-fa">resume</a>
 </nav>
 <section id="about" class="f-col w-100 bg-site-1">
     <div class="section f-col w-100">
         <div class="section-content f-col w-100">
             <a href="#about" class="my-2 title text-mono">about me</a>
-            <p class="text-size-p">
+            <p class="text-size-p w-50 text-center">
                 I write code. What more is there to say?
             </p>
         </div>
@@ -63,10 +63,40 @@
     <div class="section f-col w-100">
         <div class="section-content f-col w-100">
             <a href="#skills" class="my-2 title text-mono">skills</a>
-            <ul class="text-size-p">
-                <li>Yeet</li>
-                <li>Teey</li>
-            </ul>
+            <div class="f-row w-100 f-align-start">
+                <div id="skills-good" class="w-33 f-col mx-4">
+                    <h2 class="subtitle text-dark-green text-mono py-2">the good</h2>
+                    <h3 class="subsubtitle py-1">good amount of experience with these</h3>
+                    <ul class="w-60 text-size-p text-mono py-2">
+                        <li>Bash</li>
+                        <li>C</li>
+                        <li>Java</li>
+                        <li>Linux</li>
+                        <li>Python 3</li>
+                    </ul>
+                </div>
+                <div id="skills-bad" class="w-33 f-col mx-4">
+                    <h2 class="subtitle text-gold text-mono py-2">the bad</h2>
+                    <h3 class="subsubtitle py-1">okay with these, but could use a refresher</h3>
+                    <ul class="w-60 text-size-p text-mono py-2">
+                        <li>C++</li>
+                        <li>C#</li>
+                        <li>HTML/CSS/Javascript</li>
+                        <li>React</li>
+                        <li>Scala</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div id="skills-ugly" class="w-33 f-col mx-4">
+                    <h2 class="subtitle text-red text-mono py-2">the ugly</h2>
+                    <h3 class="subsubtitle py-1">i think i used these once</h3>
+                    <ul class="w-60 text-size-p text-mono py-2">
+                        <li>Clojure</li>
+                        <li>PHP</li>
+                        <li>R</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -103,6 +133,8 @@
         </div>
     </div>
 </section>
+
+<script src="script-no-deps.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="script.js"></script>
 </body>

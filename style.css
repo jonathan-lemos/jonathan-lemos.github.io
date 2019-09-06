@@ -163,6 +163,11 @@ body {
     margin: 0.5em;
 }
 
+.mx-4 {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
 .my-0 {
     margin-bottom: 0;
     margin-top: 0;
@@ -191,7 +196,7 @@ nav.navbar {
 
 nav.navbar a {
     align-items: center;
-    color: #9999;
+    color: #BBB8;
     font-size: 1.5vw;
     font-weight: 500;
     padding-left: 2vw;
@@ -203,11 +208,12 @@ nav.navbar a {
 nav.navbar a:hover {
     color: #F33;
     font-size: 2vw;
+    font-weight: 900;
 }
 
 nav.navbar a.active {
     color: #EEE;
-    font-size: 2vw;
+/*    font-size: 2vw; */
     font-weight: 900;
 }
 
@@ -263,6 +269,11 @@ nav.navbar > div.rhs {
     margin-top: 2em;
 }
 
+.py-1 {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
 .py-2 {
     margin-bottom: 0.5em;
     margin-top: 0.5em;
@@ -277,8 +288,20 @@ nav.navbar > div.rhs {
     padding: 20vh 10vh 15vh;
 }
 
-.section .section * {
+.subsubtitle {
+    align-items: center;
+    color: #333A;
+    font-size: 1vw;
+    font-weight: 500;
+}
 
+.subtitle {
+    align-items: center;
+    color: #333;
+    font-size: 2vw;
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: 0.05vw 0.05vw black;
 }
 
 nav.sticky {
@@ -315,12 +338,28 @@ table {
     color: #68E;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .text-dark-red, .text-dark-red * {
     color: #F33;
 }
 
+.text-gold, .text-gold * {
+    color: #E93;
+}
+
+.text-dark-green, .text-dark-green * {
+    color: #5B5;
+}
+
 .text-green, .text-green * {
     color: #5F5;
+}
+
+.text-justify {
+    text-align: justify;
 }
 
 .text-mono, .text-mono * {
@@ -375,6 +414,10 @@ table {
     color: #DDD
 }
 
+.text-yellow, .text-yellow * {
+    color: #DB3;
+}
+
 .text-underline, .text-underline * {
     text-decoration: underline;
 }
@@ -420,6 +463,15 @@ a.title:hover {
 
 .w-100 {
     width: 100%;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul.ul-no-bullet {
+    list-style-type: none;
 }
 
 @keyframes anim-bg-gradient {
