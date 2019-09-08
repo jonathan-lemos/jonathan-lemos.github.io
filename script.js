@@ -1,5 +1,3 @@
-//todo separate width logic into new js file
-
 const doResize = () => {
     const tw = $("#ls-command").width();
     $("#ls-output").width(tw);

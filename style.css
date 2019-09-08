@@ -50,7 +50,6 @@ body {
     animation: anim-bg-gradient 5s ease infinite;
     background-image: linear-gradient(-45deg, #440011DD, #110044DD);
     background-size: 400% 400%;
-    filter: blur(10px);
 }
 
 .bg-site-1 {
@@ -422,6 +421,59 @@ table {
     text-decoration: underline;
 }
 
+ul.timeline {
+    list-style: none;
+    position: relative;
+}
+
+ul.timeline > li {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+ul.timeline > li > span {
+    border: 0.75em solid #FFFFFFFF;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    z-index: 1;
+}
+
+ul.timeline::before {
+    background-color: #FFFFFFBB;
+    content: "";
+    height: 105%;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    right: 0;
+    width: 0.5em;
+}
+
+ul.timeline > li > div.time {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+ul.timeline > li > div.entry {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
 a.title {
     align-items: center;
     color: #333;
@@ -466,8 +518,8 @@ a.title:hover {
 }
 
 ul {
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 ul.ul-no-bullet {
