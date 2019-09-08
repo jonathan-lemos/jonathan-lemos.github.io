@@ -191,6 +191,7 @@ nav.navbar {
     justify-content: space-evenly;
     overflow: visible;
     width: 100%;
+    z-index: 2;
 }
 
 nav.navbar a {
