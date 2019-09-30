@@ -52,20 +52,20 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const shellInputType = async text => {
     let i = 0;
-    byId("shell-input").text("");
+    byId("shell-input").innerText = "";
     while (i < text.length) {
-        if (byId("shell-input").text() !== text.substring(0, i)) {
+        if (byId("shell-input").innerText !== text.substring(0, i)) {
             break;
         }
 
-        byId("shell-input").text(byId("shell-input").text() + text.charAt(i));
+        byId("shell-input").innerText = byId("shell-input").innerText + text.charAt(i);
         i++;
         await sleep(50);
     }
 };
 
 const shellInputBlank = () => {
-    byId("shell-input").text("");
+    byId("shell-input").innerText = "";
 };
 
 byId("anchor-about").onmouseover = () => shellInputType("cd about/");
