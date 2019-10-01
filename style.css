@@ -46,6 +46,10 @@ body {
     position: relative;
 }
 
+.bg-focus {
+    background-color: #FFFFFF44;
+}
+
 .bg-gradient {
     animation: anim-bg-gradient 5s ease infinite;
     background-image: linear-gradient(-45deg, #440011DD, #110044DD);
@@ -64,8 +68,55 @@ body {
     animation: anim-blink 1s infinite;
 }
 
+a.contact {
+    align-items: center;
+    background-color: #FFFFFF33;
+    color: black;
+    display: flex;
+    flex-basis: 0;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    margin: 0.5em;
+    padding: 4em 1em;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a.contact:hover {
+    background-color: #FFFFFF66;
+}
+
+a.contact > span, a.contact > div.contact-icon {
+    transition: 0.5s;
+}
+
+a.contact:hover > span {
+    color: #882222;
+}
+
+a.contact:hover > div.contact-icon {
+   border-color: #882222;
+    color: #882222;
+}
+
+div.contact-icon {
+    align-items: center;
+    border: 0.1em solid black;
+    border-radius: calc(1.5vw + 1.25em);
+    display: flex;
+    font-size: calc(1.5vw + 1.25em);
+    height: calc(1.5vw + 1.25em);
+    justify-content: center;
+    width: calc(1.5vw + 1.25em);
+}
+
 .f-align-start {
     align-items: start !important;
+}
+
+.f-align-stretch {
+    align-items: stretch !important;
 }
 
 .f-basis-0 {
@@ -187,7 +238,7 @@ nav.navbar {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    height: 4vw;
+    height: calc(4vw + 1em);
     justify-content: space-evenly;
     overflow: visible;
     width: 100%;
@@ -293,10 +344,10 @@ a.project {
     color: black;
     display: flex;
     flex-direction: column;
-    height: calc(10vw + 10em);
+    min-height: calc(25vw);
     text-decoration: none;
     transition: 0.5s;
-    width: calc(10vw + 10em);
+    width: calc(25vw);
 }
 
 a.project:hover {
@@ -304,7 +355,6 @@ a.project:hover {
 }
 
 a.project > h1 {
-    font-size: calc(0.8vw + 0.8em);
     font-weight: 700;
     margin: 1vw 0;
     padding-bottom: 1vw;
@@ -317,7 +367,6 @@ a.project:hover > h1 {
 }
 
 a.project > p {
-    font-size: calc(0.5vw + 0.5em);
     margin: 1em 1em;
     text-align: center;
 }
@@ -336,20 +385,28 @@ div.project-container {
 
 .section {
     height: 100%;
-    padding: 20vh 10vh 15vh;
+    padding-bottom: 15vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 20vh;
+}
+
+div.skill {
+    padding-bottom: 4vh;
 }
 
 .subsubtitle {
     align-items: center;
     color: #333A;
-    font-size: 1vw;
+    font-size: calc(0.5vw + 0.6em);
     font-weight: 500;
+    padding: 0 0.5em;
 }
 
 .subtitle {
     align-items: center;
     color: #333;
-    font-size: 2vw;
+    font-size: calc(2vw + 0.5em);
     font-weight: 700;
     text-decoration: none;
     text-shadow: 0.05vw 0.05vw black;
@@ -362,15 +419,24 @@ nav.sticky {
 }
 
 nav.sticky + * {
-    padding-top: 4vw;
+    padding-top: calc(4vw + 1em);
 }
 
 table {
     border: 0;
 }
 
+.table-cell {
+    display: flex;
+    flex-grow: 1;
+}
+
 .text-fa, .text-fa * {
     font-family: FontAwesome, 'Roboto Mono', monospace !important;
+}
+
+.text-fa-serif, .text-fa-serif * {
+    font-family: FontAwesome, 'Open Sans', sans-serif !important;
 }
 
 .text-black, .text-black * {
@@ -450,7 +516,15 @@ table {
 }
 
 .text-size-p, .text-size-p * {
-    font-size: calc(0.75vw + 0.5rem);
+    font-size: calc(0.25vw + 1em);
+}
+
+.text-size-title, .text-size-title * {
+    font-size: calc(2vw + 1em);
+}
+
+.text-size-subtitle, .text-size-subtitle * {
+    font-size: calc(1vw + 0.8em);
 }
 
 .text-size-x1-5, .text-size-x1-5 * {
@@ -501,17 +575,17 @@ ul.timeline > li {
 }
 
 ul.timeline > li::before {
+    background-color: #DDDDDDFF;
     border: 0.25em solid #FFFFFFFF;
     border-radius: 50%;
-    background-color: #DDDDDDFF;
     content: "";
+    height: 0.75em;
     left: 0;
     margin-left: auto;
     margin-right: auto;
     position: absolute;
     right: 0;
     width: 0.75em;
-    height: 0.75em;
     z-index: 1;
 }
 
@@ -526,12 +600,12 @@ ul.timeline > li > div.entry {
 
 ul.timeline > li > div.entry > h1 {
     color: #111111CC;
-    font-size: calc(0.85vw + 0.5em);
+    font-size: calc(0.5vw + 1em);
 }
 
 ul.timeline > li > div.entry > h2 {
     color: #666666CC;
-    font-size: calc(0.5vw + 0.5em);
+    font-size: calc(0.5vw + 1em);
 }
 
 ul.timeline > li > div.time {
@@ -545,13 +619,12 @@ ul.timeline > li > div.time {
 
 ul.timeline > li > div.time > h1 {
     color: #444444CC;
-    font-size: calc(0.75vw + 0.5em);
+    font-size: calc(0.5vw + 1em);
 }
 
 a.title {
     align-items: center;
     color: #333;
-    font-size: 2.5vw;
     font-weight: 900;
     padding-left: 2vw;
     padding-right: 2vw;

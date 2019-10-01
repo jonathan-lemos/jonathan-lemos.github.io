@@ -6,6 +6,7 @@ const doResize = () => {
     const tw = byId("ls-command").offsetWidth + "px";
     byId("ls-output").style.width = tw;
     byId("shell").style.width = tw;
+    stickPos = byId("main").offsetTop + byId("main").offsetHeight;
 };
 
 const doScroll = () => {
@@ -39,7 +40,7 @@ const doScroll = () => {
     });
 };
 
-const stickPos = byId("navbar").offsetTop;
+let stickPos = byId("main").offsetTop + byId("main").offsetHeight;
 
 window.onresize = doResize;
 window.onload = () => {
