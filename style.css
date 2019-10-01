@@ -36,6 +36,7 @@ body {
 .bg-anime {
     animation: anim-bg-blur-shift 5s ease infinite;
     background-image: url("anime_wallpaper.jpg");
+    background-color: #000000;
 }
 
 .bg-black-50 {
@@ -398,7 +399,7 @@ div.skill {
 .subsubtitle {
     align-items: center;
     color: #333A;
-    font-size: calc(0.5vw + 0.6em);
+    font-size: calc(0.5vw + 0.8em);
     font-weight: 500;
     padding: 0 0.5em;
 }
@@ -406,10 +407,10 @@ div.skill {
 .subtitle {
     align-items: center;
     color: #333;
-    font-size: calc(2vw + 0.5em);
+    font-size: calc(2vw + 0.8em);
     font-weight: 700;
     text-decoration: none;
-    text-shadow: 0.05vw 0.05vw black;
+    text-shadow: 0.01em 0.01em black;
 }
 
 nav.sticky {
@@ -516,15 +517,15 @@ table {
 }
 
 .text-size-p, .text-size-p * {
-    font-size: calc(0.25vw + 1em);
+    font-size: calc(0.25vw + 1.25em);
 }
 
 .text-size-title, .text-size-title * {
-    font-size: calc(2vw + 1em);
+    font-size: calc(2vw + 1.25em);
 }
 
 .text-size-subtitle, .text-size-subtitle * {
-    font-size: calc(1vw + 0.8em);
+    font-size: calc(1vw + 1em);
 }
 
 .text-size-x1-5, .text-size-x1-5 * {
@@ -600,12 +601,12 @@ ul.timeline > li > div.entry {
 
 ul.timeline > li > div.entry > h1 {
     color: #111111CC;
-    font-size: calc(0.5vw + 1em);
+    font-size: calc(0.5vw + 1.25em);
 }
 
 ul.timeline > li > div.entry > h2 {
     color: #666666CC;
-    font-size: calc(0.5vw + 1em);
+    font-size: calc(0.5vw + 1.25em);
 }
 
 ul.timeline > li > div.time {
