@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="main">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono&display=swap"
@@ -10,168 +10,156 @@
     <title>Jonathan Lemos</title>
     <meta name="description" content="$ ls jonathan-lemos/"/>
 </head>
-<body class="p-0 m-0 h-100">
-<main id="main" class="f-col bg-container h-min-100vh">
-    <div class="bg bg-anime"></div>
-    <div class="bg bg-gradient"></div>
-    <div class="f-grow"></div>
-    <div id="ls-command" class="f-row text-bold-ultra text-mono text-size-4vw glitch">
-        <h1 class="text-blue pre">$ ls </h1>
-        <h1 class="text-green">jonathan</h1>
-        <h1 class="text-blue">_</h1>
-        <h1 class="text-green">lemos</h1>
-        <h1 class="text-blue">/</h1>
+<body>
+<main id="main">
+    <div class="bg anime"></div>
+    <div class="bg gradient"></div>
+    <div class="grow"></div>
+    <div id="ls-command">
+        <h1 class="blue pre">$ ls </h1>
+        <h1 class="green">jonathan</h1>
+        <h1 class="blue">_</h1>
+        <h1 class="green">lemos</h1>
+        <h1 class="blue">/</h1>
     </div>
-    <table id="ls-output" class="w-60 text-mono text-white text-size-2-5vw text-bold-ultra">
+    <table id="ls-output" class="w-60">
         <tr>
-            <td><a href="#about" id="anchor-about" class="anchor hover-red">about</a></td>
-            <td><a href="#contact" id="anchor-contact" class="anchor hover-red">contact</a></td>
-            <td><a href="#experience" id="anchor-experience" class="anchor hover-red">experience</a></td>
+            <td><a href="#about" id="anchor-about" class="hover-red">about</a></td>
+            <td><a href="#contact" id="anchor-contact" class="hover-red">contact</a></td>
+            <td><a href="#experience" id="anchor-experience" class="hover-red">experience</a></td>
         </tr>
         <tr>
-            <td><a href="#projects" id="anchor-projects" class="anchor hover-red">projects</a></td>
-            <td><a href="resume.pdf" id="anchor-resume" class="anchor hover-blue text-fa" download>resume</a></td>
-            <td><a href="#skills" id="anchor-skills" class="anchor hover-red">skills</a></td>
+            <td><a href="#projects" id="anchor-projects" class="hover-red">projects</a></td>
+            <td><a href="resume.pdf" id="anchor-resume" class="hover-blue fa-mono" download>resume</a></td>
+            <td><a href="#skills" id="anchor-skills" class="hover-red">skills</a></td>
         </tr>
     </table>
-    <div id="shell" class="f-row text-bold-ultra text-mono text-size-4vw">
-        <h1 class="text-blue">$&nbsp;</h1>
-        <h1 id="shell-input" class="text-blue pre"></h1>
-        <h1 class="text-blue blink">_</h1>
+    <div id="shell">
+        <h1 class="blue">$&nbsp;</h1>
+        <h1 id="shell-input" class="blue pre"></h1>
+        <h1 class="blue blink">_</h1>
     </div>
-    <div class="f-grow"></div>
+    <div class="grow"></div>
 </main>
-<nav id="navbar" class="navbar pb-4 text-mono">
-    <a href="#main" class="nav-link">/home</a>
-    <a href="#about" class="nav-link">about</a>
-    <a href="#skills" class="nav-link">skills</a>
-    <a href="#experience" class="nav-link">experience</a>
-    <a href="#projects" class="nav-link">projects</a>
-    <a href="#contact" class="nav-link">contact</a>
-    <a href="resume.pdf" class="nav-link hover-blue text-fa">resume</a>
+<nav>
+    <a href="#main">/home</a>
+    <a href="#about">about</a>
+    <a href="#skills">skills</a>
+    <a href="#experience">experience</a>
+    <a href="#projects">projects</a>
+    <a href="#contact">contact</a>
+    <a href="resume.pdf" class="hover-blue fa-mono">resume</a>
 </nav>
-<section id="about" class="f-col w-100 bg-site-1">
-    <div class="section f-col w-100">
-        <div class="section-content f-col w-100">
-            <a href="#about" class="my-2 title text-size-title text-mono">about me</a>
-            <p class="text-size-p w-50 text-center">
-                I write code. What more is there to say?
-            </p>
-        </div>
-    </div>
+<section id="about">
+    <a href="#about" class="title">about me</a>
+    <p class="w-50 text-center">
+        I write code. What more is there to say?
+    </p>
 </section>
-<section id="skills" class="w-100 bg-site-2">
-    <div class="section f-col w-100">
-        <div class="section-content f-col w-100">
-            <a href="#skills" class="my-2 title text-size-title text-mono">skills</a>
-            <div class="f-row w-100 f-align-stretch">
-                <div id="skills-good" class="w-33 f-col mx-4 bg-focus skill">
-                    <h2 class="subtitle text-dark-green text-mono py-2">the good</h2>
-                    <h3 class="subsubtitle py-1">good amount of experience with these</h3>
-                    <ul class="w-60 text-size-p text-mono py-2">
-                        <li>Bash</li>
-                        <li>C</li>
-                        <li>Java</li>
-                        <li>Linux</li>
-                        <li>Python 3</li>
-                    </ul>
-                </div>
-                <div id="skills-bad" class="w-33 f-col mx-4 bg-focus skill">
-                    <h2 class="subtitle text-gold text-mono py-2">the bad</h2>
-                    <h3 class="subsubtitle py-1">okay with these, but could use a refresher</h3>
-                    <ul class="w-60 text-size-p text-mono py-2">
-                        <li>C++</li>
-                        <li>C#</li>
-                        <li>CSS</li>
-                        <li>HTML</li>
-                        <li>Javascript</li>
-                        <li>React</li>
-                        <li>Scala</li>
-                        <li>SQL</li>
-                    </ul>
-                </div>
-                <div id="skills-ugly" class="w-33 f-col mx-4 bg-focus skill">
-                    <h2 class="subtitle text-red text-mono py-2">the ugly</h2>
-                    <h3 class="subsubtitle py-1">i think i used these once</h3>
-                    <ul class="w-60 text-size-p text-mono py-2">
-                        <li>Clojure</li>
-                        <li>PHP</li>
-                        <li>R</li>
-                    </ul>
-                </div>
-            </div>
+<section id="skills">
+    <a href="#skills" class="title">skills</a>
+    <div class="row center align-stretch">
+        <div id="skills-good" class="skill">
+            <h2 class="subtitle dark-green">the good</h2>
+            <h3 class="subsubtitle">good amount of experience with these</h3>
+            <ul>
+                <li>C</li>
+                <li>C#</li>
+                <li>CSS/HTML/JS</li>
+                <li>Java</li>
+                <li>Linux</li>
+                <li>Node.js</li>
+                <li>Python</li>
+                <li>React</li>
+                <li>SASS</li>
+                <li>Typescript</li>
+            </ul>
         </div>
-    </div>
-</section>
-<section id="experience" class="w-100 bg-site-1">
-    <div class="section f-col w-100">
-        <div class="section-content f-col w-100">
-            <a href="#experience" class="my-2 title text-size-title text-mono">experience</a>
-            <ul class="timeline w-100">
-                <li>
-                    <div class="time">
-                        <h1>May 2019 - Present</h1>
-                    </div>
-                    <span></span>
-                    <div class="entry">
-                        <h1>Duos Technologies</h1>
-                        <h2>Artificial Intelligence Intern</h2>
-                    </div>
-                </li>
+        <div id="skills-bad" class="skill">
+            <h2 class="subtitle gold">the bad</h2>
+            <h3 class="subsubtitle">okay with these, but could use a refresher</h3>
+            <ul>
+                <li>C++</li>
+                <li>Rust</li>
+                <li>Scala</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+        <div id="skills-ugly" class="skill">
+            <h2 class="subtitle dark-red">the ugly</h2>
+            <h3 class="subsubtitle py-1">i think i used these once</h3>
+            <ul>
+                <li>Clojure</li>
+                <li>PHP</li>
+                <li>R</li>
             </ul>
         </div>
     </div>
 </section>
-<section id="projects" class="w-100 bg-site-2">
-    <div class="section f-col w-100">
-        <div class="section-content f-col w-100">
-            <a href="#projects" class="pb-4 my-2 title text-size-title text-mono">projects</a>
-            <div class="project-container">
-                <a class="project" href="https://github.com/jonathan-lemos/website_mk2" target="_blank">
-                    <h1 class="text-mono text-size-subtitle">this website</h1>
-                    <p class="text-size-p">
-                        Uses a combination of HTML5/CSS3/Javascript ES6 to deliver a responsive, good-looking
-                        personal website with a few easter eggs up its sleeve.
-                    </p>
-                </a>
-                <a class="project" href="https://github.com/jonathan-lemos/cs1help" target="_blank">
-                    <h1 class="text-mono text-size-subtitle">cs1 guide</h1>
-                    <p class="text-size-p">
-                        A React single-page wiki that helps you get up to speed in Computer Science 1 quickly.
-                    </p>
-                </a>
-                <a class="project" href="https://github.com/jonathan-lemos/CsEarley" target="_blank">
-                    <h1 class="text-mono text-size-subtitle">CsEarley</h1>
-                    <p class="text-size-p">
-                        A universal parser written in C# that can support any grammar.
-                    </p>
-                </a>
+<section id="experience">
+    <a href="#experience" class="title">experience</a>
+    <ul class="timeline">
+        <li>
+            <div class="time">
+                <h1>May 2019 - February 2020</h1>
             </div>
-        </div>
+            <div class="entry">
+                <h1>Duos Technologies</h1>
+                <h2>Artificial Intelligence Intern</h2>
+            </div>
+        </li>
+        <li>
+            <div class="time">
+                <h1>February 2020 - Present</h1>
+            </div>
+            <div class="entry">
+                <h1>Autopoint</h1>
+                <h2>Software Development Intern</h2>
+            </div>
+        </li>
+    </ul>
+</section>
+<section id="projects">
+    <a href="#projects" class="title">projects</a>
+    <div class="row center align-stretch">
+        <a class="project" href="https://github.com/jonathan-lemos/website_mk2" target="_blank">
+            <h1 class="subtitle">this website</h1>
+            <p>
+                Uses a combination of HTML5/CSS3/Javascript ES6 to deliver a responsive, good-looking
+                personal website with a few easter eggs up its sleeve.
+            </p>
+        </a>
+        <a class="project" href="https://github.com/jonathan-lemos/cs1help" target="_blank">
+            <h1 class="subtitle">cs1 guide</h1>
+            <p class="text-size-p">
+                A React single-page wiki that helps you get up to speed in Computer Science 1 quickly.
+            </p>
+        </a>
+        <a class="project" href="https://github.com/jonathan-lemos/CsEarley" target="_blank">
+            <h1 class="subtitle">CsEarley</h1>
+            <p>
+                A universal parser written in C# that can support any grammar.
+            </p>
+        </a>
     </div>
 </section>
-<section id="contact" class="w-100 bg-site-1">
-    <div class="section f-col w-100">
-        <div class="section-content f-col w-100">
-            <a href="#contact" class="my-2 title text-size-title text-mono">contact</a>
-            <div class="f-row w-100 f-align-stretch">
-                <a class="contact" href="mailto:jonathanlemos@protonmail.com" target="_blank">
-                    <div class="contact-icon text-fa-serif"></div>
-                    <span class="text-size-p text-fa-serif">jonathanlemos@protonmail.com</span>
-                </a>
-                <a class="contact" href="https://github.com/jonathan-lemos">
-                    <div class="contact-icon text-fa-serif"></div>
-                    <span class="text-size-p text-fa-serif">jonathan-lemos</span>
-                </a>
-                <a class="contact" href="https://linkedin.com/in/lemos-jonathan">
-                    <div class="contact-icon text-fa-serif"></div>
-                    <span class="text-size-p lemos-jonathan">lemos-jonathan</span>
-                </a>
-            </div>
-        </div>
+<section id="contact">
+    <a href="#contact" class="title">contact</a>
+    <div class="row w-100 align-stretch">
+        <a class="contact" href="mailto:jonathanlemos@protonmail.com" target="_blank">
+            <div class="contact-icon"></div>
+            <span>jonathanlemos@protonmail.com</span>
+        </a>
+        <a class="contact" href="https://github.com/jonathan-lemos">
+            <div class="contact-icon"></div>
+            <span>jonathan-lemos</span>
+        </a>
+        <a class="contact" href="https://linkedin.com/in/lemos-jonathan">
+            <div class="contact-icon"></div>
+            <span>lemos-jonathan</span>
+        </a>
     </div>
 </section>
 
-<script src="script.js"></script>
 </body>
 </html>

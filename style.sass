@@ -1,0 +1,344 @@
+@import "styles/base"
+@import "styles/container"
+@import "styles/sizing"
+@import "styles/spacing"
+@import "styles/text"
+
+@keyframes bg-blur
+  0%
+    filter: blur(8px)
+  50%
+    filter: blur(3px)
+  100%
+    filter: blur(8px)
+
+@keyframes bg-shift
+  0%
+    background-position: 0 0
+  50%
+    background-position: 100% 100%
+  100%
+    background-position: 0 0
+
+@keyframes bg-gradient
+  0%
+    background-color: #104D
+  50%
+    background-color: #401D
+  100%
+    background-color: #104D
+
+@keyframes glitch
+  70%
+    transform: none
+    filter: none
+
+  72%
+    transform: none
+    filter: invert(1)
+
+  73%
+    transform: translateX(5vw) scale(1.25, 0.8)
+    filter: invert(1)
+
+  74%
+    transform: translateX(-10vw) translateY(-5vh) skew(5deg, -5deg) scale(1.5, 0.6)
+    filter: invert(1)
+
+  75%
+    transform: translateX(5vw) translateY(2.5vh) scale(1.25, 0.8)
+    filter: invert(1)
+
+  76%
+    transform: none
+    filter: none
+
+@keyframes blink
+  0%
+    opacity: 1
+
+  49%
+    opacity: 1
+
+  50%
+    opacity: 0
+
+  99%
+    opacity: 0
+
+  100%
+    opacity: 1
+
+.blink
+  animation: blink 1s linear infinite
+
+.bg
+  background-size: cover
+  content: ""
+  display: block
+  height: 105vh
+  left: -0.5rem
+  overflow-x: hidden
+  position: fixed
+  right: 0
+  top: -0.5rem
+  width: 105vw
+  z-index: -1
+
+.bg.anime
+  // animation: bg-blur 5s ease infinite
+  filter: blur(4px)
+  background-image: url("anime_wallpaper.jpg")
+  background-color: #000000
+
+.bg.gradient
+  animation: bg-shift 5s ease infinite
+  background-image: linear-gradient(-45deg, #401D, #104D)
+  background-size: 400% 400%
+
+main
+  @extend .col
+  min-height: 100%
+  width: 100%
+  position: relative
+
+  & > #ls-command, & > #shell
+    @extend .row
+    align-items: stretch
+    animation: glitch 3s step-start infinite
+
+    & *
+      @extend .monospace
+      @extend .bolder
+      font-size: 4vw
+
+  & > #ls-output
+    width: 60%
+    & *
+      @extend .fa-mono
+      @extend .bolder
+      @extend .white
+      font-size: 2.5vw
+
+
+.hover-red:hover
+  color: #EE6666 !important
+
+.hover-blue:hover
+  color: #6699EE !important
+
+.fa-mono
+  font-family: "FontAwesome", "Roboto Mono", monospace
+
+.fa-serif
+  font-family: "FontAwesome", "Open Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif
+
+@media screen and (orientation: landscape)
+  nav
+    display: flex
+    flex-direction: row
+    justify-content: space-evenly
+    align-items: center
+    padding-bottom: 0.5rem
+    width: 100%
+    height: calc(4vw + 1rem)
+    position: sticky
+    top: 0
+    overflow: visible
+    z-index: 1
+
+    & a
+      font-family: 'Roboto Mono', monospace
+      color: #BBB8
+      font-size: 1.5vw
+      font-weight: 500
+      padding-left: 2vw
+      padding-right: 2vw
+      text-decoration: none
+
+      &:hover
+        color: #F33
+        font-weight: 900
+
+      &.active
+        font-size: 1.75vw
+        color: #EEE
+        font-weight: 900
+
+@media screen and (orientation: portrait)
+  nav
+    display: none
+
+section
+  @extend .py-l
+  @extend .px-xl
+  @extend .col
+  width: 100%
+
+section:nth-child(2n), ul.timeline > li:nth-child(2n)
+  background-color: #FFF6
+
+  &:hover
+    background-color: #FFFA
+
+section:nth-child(2n + 1), ul.timeline > li:nth-child(2n + 1)
+  background-color: #EEE6
+
+  &:hover
+    background-color: #FFFA
+
+a.title
+  @extend .m-m
+  @extend .monospace
+  @extend .bolder
+  font-size: calc(1vw + 2.5rem)
+  text-decoration: none
+
+  &:hover
+    color: #C33
+
+.subtitle
+  @extend .m-s
+  @extend .monospace
+  @extend .bolder
+  font-size: calc(0.75vw + 1.75rem)
+  // text-shadow: 0.01rem 0.01rem black
+  text-align: center
+
+.subsubtitle
+  @extend .m-xs
+  @extend .monospace
+  @extend .bold
+  font-size: calc(0.25vw + 1rem)
+  text-align: center
+
+p, ul, ul * w
+  @extend .my-s
+  font-size: calc(0.25vw + 1.25rem)
+
+li
+  @extend .monospace
+
+.tile
+  @extend .m-s
+  @extend .p-l
+  background-color: #FFF4
+
+.tile:hover
+  background-color: #FFF9
+
+.skill
+  @extend .tile, .col, .grow
+  width: max(30%, 20rem)
+
+  & > ul
+    width: max-content
+
+=link
+  &, & *
+    text-decoration: none
+    color: black
+
+  &:hover, &:hover *
+    color: #822
+
+.project
+  @extend .tile, .col, .grow
+  width: max(30%, 20rem)
+
+  +link
+
+.contact
+  @extend .tile, .col, .grow
+  width: max(30%, 20rem)
+
+  +link
+
+  & > span
+    @extend p
+
+  & > .contact-icon
+    @extend .fa-serif
+    @extend .col
+    justify-content: center
+    height: calc(0.5vw + 1.75em)
+    width: calc(0.5vw + 1.75em)
+    font-size: calc(1.5vw + 1.5rem)
+    border: 0.1em solid black
+    border-radius: 50%
+
+  &:hover > .contact-icon
+    border-color: #822
+
+ul.timeline
+  @extend .my-m
+  @extend .py-m
+  @extend .w-100
+  list-style: none
+  margin: 0
+  padding: 0
+
+  &::before
+    background-color: #FFFB
+    content: ""
+    position: absolute
+    width: 0.5rem
+    height: 105%
+    left: 0
+    right: 0
+    top: -2.5%
+    margin-left: auto
+    margin-right: auto
+
+  & > li
+    @extend .row
+    @extend .py-l
+    @extend .w-100
+    flex-wrap: nowrap
+
+    &::before
+      background-color: #DDDC
+      border: 0.25rem solid #FFFC
+      border-radius: 50%
+      content: ""
+      height: 0.75rem
+      left: 0
+      margin-left: auto
+      margin-right: auto
+      position: absolute
+      right: 0
+      width: 0.75rem
+      z-index: 1
+
+    &:hover::before
+      background-color: #DDDF
+      border: 0.25rem solid #FFFF
+
+    & > div.time
+      @extend .col
+      @extend .grow
+      margin-left: 0
+      margin-right: 0
+      width: 100%
+
+      & > h1
+        color: #444C
+        font-size: calc(0.25vw + 1.5rem)
+
+    & > div.entry
+      @extend .col
+      @extend .grow
+      margin-left: 0
+      margin-right: 0
+      width: 100%
+
+      & > h1
+        color: #111C
+        font-size: calc(0.5vw + 1.5rem)
+
+      & > h2
+        color: #666C
+        font-size: calc(0.25vw + 1.25rem)
+
+
+
