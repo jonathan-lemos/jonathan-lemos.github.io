@@ -1,0 +1,24 @@
+{
+  "name": "jonathan-lemos.github.io",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "script.js",
+  "scripts": {
+    "build": "npx sass style.sass style.css && npx tsc --build tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathan-lemos/jonathan-lemos.github.io.git"
+  },
+  "author": "Jonathan Lemos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonathan-lemos/jonathan-lemos.github.io/issues"
+  },
+  "homepage": "https://github.com/jonathan-lemos/jonathan-lemos.github.io#readme",
+  "dependencies": {
+    "sass": "^1.26.10",
+    "typescript": "^4.0.2"
+  }
+}

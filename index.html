@@ -9,38 +9,44 @@
     <link href="style.css" rel="stylesheet">
     <title>Jonathan Lemos</title>
     <meta name="description" content="$ ls jonathan-lemos/"/>
+    <script src="script.js" defer></script>
 </head>
 <body>
 <main id="main">
     <div class="bg anime"></div>
     <div class="bg gradient"></div>
     <div class="grow"></div>
-    <div id="ls-command">
-        <h1 class="blue pre">$ ls </h1>
-        <h1 class="green">jonathan</h1>
-        <h1 class="blue">_</h1>
-        <h1 class="green">lemos</h1>
-        <h1 class="blue">/</h1>
-    </div>
-    <table id="ls-output" class="w-60">
-        <tr>
-            <td><a href="#about" id="anchor-about" class="hover-red">about</a></td>
-            <td><a href="#contact" id="anchor-contact" class="hover-red">contact</a></td>
-            <td><a href="#experience" id="anchor-experience" class="hover-red">experience</a></td>
-        </tr>
-        <tr>
-            <td><a href="#projects" id="anchor-projects" class="hover-red">projects</a></td>
-            <td><a href="resume.pdf" id="anchor-resume" class="hover-blue fa-mono" download>resume</a></td>
-            <td><a href="#skills" id="anchor-skills" class="hover-red">skills</a></td>
-        </tr>
-    </table>
-    <div id="shell">
-        <h1 class="blue">$&nbsp;</h1>
-        <h1 id="shell-input" class="blue pre"></h1>
-        <h1 class="blue blink">_</h1>
+    <div>
+        <div id="ls-command" class="glitch">
+            <h1 class="blue pre">$ ls </h1>
+            <h1 class="green">jonathan</h1>
+            <h1 class="blue">_</h1>
+            <h1 class="green">lemos</h1>
+            <h1 class="blue">/</h1>
+        </div>
+        <div class="w-100">
+            <table id="ls-output" class="w-100">
+                <tr>
+                    <td><a href="#about" id="anchor-about" class="hover-red">about</a></td>
+                    <td><a href="#contact" id="anchor-contact" class="hover-red">contact</a></td>
+                    <td><a href="#experience" id="anchor-experience" class="hover-red">experience</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#projects" id="anchor-projects" class="hover-red">projects</a></td>
+                    <td><a href="resume.pdf" id="anchor-resume" class="hover-blue fa-mono" download>resume</a></td>
+                    <td><a href="#skills" id="anchor-skills" class="hover-red">skills</a></td>
+                </tr>
+            </table>
+            <div id="shell">
+                <h1 class="blue">$&nbsp;</h1>
+                <h1 id="shell-input" class="blue pre"></h1>
+                <h1 class="blue blink">_</h1>
+            </div>
+        </div>
     </div>
     <div class="grow"></div>
 </main>
+<div class="sentinel"></div>
 <nav>
     <a href="#main">/home</a>
     <a href="#about">about</a>

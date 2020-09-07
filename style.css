@@ -1,0 +1,1234 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 0.35s;
+  outline: none;
+  border: none;
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  min-height: 100%;
+  width: 100%;
+}
+
+.monospace, li, .subsubtitle, .subtitle, a.title, main #ls-command *, main #shell *, .monospace > *, li > *, .subsubtitle > *, .subtitle > *, a.title > * {
+  font-family: "Roboto Mono", monospace;
+}
+
+.sans, *, .sans > * {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
+}
+
+.row, ul.timeline > li, main #ls-command, main #shell {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.row.nowrap, ul.timeline > li.nowrap, main .nowrap#ls-command, main .nowrap#shell {
+  flex-wrap: nowrap;
+}
+.row.center, ul.timeline > li.center, main .center#ls-command, main .center#shell {
+  justify-content: center;
+}
+.row.space-evenly, ul.timeline > li.space-evenly, main .space-evenly#ls-command, main .space-evenly#shell {
+  justify-content: space-evenly;
+}
+.row.space-between, ul.timeline > li.space-between, main .space-between#ls-command, main .space-between#shell {
+  justify-content: space-between;
+}
+.row.align-stretch, ul.timeline > li.align-stretch, main .align-stretch#ls-command, main .align-stretch#shell {
+  align-items: stretch;
+}
+.row.grow-children > *, ul.timeline > li.grow-children > *, main .grow-children#ls-command > *, main .grow-children#shell > * {
+  flex-grow: 1;
+}
+.row > .self-start, ul.timeline > li > .self-start, main #ls-command > .self-start, main #shell > .self-start {
+  align-self: start;
+}
+.row.reverse, ul.timeline > li.reverse, main .reverse#ls-command, main .reverse#shell {
+  flex-direction: row-reverse;
+}
+
+.col, ul.timeline > li > div.entry, ul.timeline > li > div.time, .contact > .contact-icon, .contact, .project, .skill, section, main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.col.nowrap, ul.timeline > li > div.nowrap.entry, ul.timeline > li > div.nowrap.time, .contact > .nowrap.contact-icon, .nowrap.contact, .nowrap.project, .nowrap.skill, section.nowrap, main.nowrap {
+  flex-wrap: nowrap;
+}
+.col.center, ul.timeline > li > div.center.entry, ul.timeline > li > div.center.time, .contact > .center.contact-icon, .center.contact, .center.project, .center.skill, section.center, main.center {
+  justify-content: center;
+}
+.col.space-evenly, ul.timeline > li > div.space-evenly.entry, ul.timeline > li > div.space-evenly.time, .contact > .space-evenly.contact-icon, .space-evenly.contact, .space-evenly.project, .space-evenly.skill, section.space-evenly, main.space-evenly {
+  justify-content: space-evenly;
+}
+.col.space-between, ul.timeline > li > div.space-between.entry, ul.timeline > li > div.space-between.time, .contact > .space-between.contact-icon, .space-between.contact, .space-between.project, .space-between.skill, section.space-between, main.space-between {
+  justify-content: space-between;
+}
+.col.align-stretch, ul.timeline > li > div.align-stretch.entry, ul.timeline > li > div.align-stretch.time, .contact > .align-stretch.contact-icon, .align-stretch.contact, .align-stretch.project, .align-stretch.skill, section.align-stretch, main.align-stretch {
+  align-items: stretch;
+}
+.col.grow-children > *, ul.timeline > li > div.grow-children.entry > *, ul.timeline > li > div.grow-children.time > *, .contact > .grow-children.contact-icon > *, .grow-children.contact > *, .grow-children.project > *, .grow-children.skill > *, section.grow-children > *, main.grow-children > * {
+  flex-grow: 1;
+}
+.col > .self-start, ul.timeline > li > div.entry > .self-start, ul.timeline > li > div.time > .self-start, .contact > .contact-icon > .self-start, .contact > .self-start, .project > .self-start, .skill > .self-start, section > .self-start, main > .self-start {
+  align-self: start;
+}
+.col.reverse, ul.timeline > li > div.reverse.entry, ul.timeline > li > div.reverse.time, .contact > .reverse.contact-icon, .reverse.contact, .reverse.project, .reverse.skill, section.reverse, main.reverse {
+  flex-direction: column-reverse;
+}
+
+.row > .grow, ul.timeline > li > .grow, ul.timeline > li > div.entry, ul.timeline > li > div.time, .row > .contact, ul.timeline > li > .contact, .row > .project, ul.timeline > li > .project, .row > .skill, ul.timeline > li > .skill, main #ls-command > .grow, main ul.timeline > li#ls-command > div.entry, main ul.timeline > li#ls-command > div.time, main #ls-command > .contact, main #ls-command > .project, main #ls-command > .skill, main #shell > .grow, main ul.timeline > li#shell > div.entry, main ul.timeline > li#shell > div.time, main #shell > .contact, main #shell > .project, main #shell > .skill, .col > .grow, ul.timeline > li > div.entry > .grow, ul.timeline > li > div.time > .grow, .contact > .contact-icon > .grow, .col > .contact, ul.timeline > li > div.entry > .contact, ul.timeline > li > div.time > .contact, .contact > .contact-icon > .contact, .contact > .grow, .contact > .contact, .col > .project, ul.timeline > li > div.entry > .project, ul.timeline > li > div.time > .project, .contact > .contact-icon > .project, .contact > .project, .project > .grow, .project > .contact, .project > .project, .col > .skill, ul.timeline > li > div.entry > .skill, ul.timeline > li > div.time > .skill, .contact > .contact-icon > .skill, .contact > .skill, .project > .skill, .skill > .grow, .skill > .contact, .skill > .project, .skill > .skill, section > .grow, section > .contact, section > .project, section > .skill, main > .grow, main > .contact, main > .project, main > .skill {
+  flex-grow: 1;
+}
+
+.h-0 {
+  height: 0%;
+}
+
+.w-0 {
+  width: 0%;
+}
+
+.h-0-vh {
+  height: 0 vh;
+}
+
+.w-0-vw {
+  width: 0 vw;
+}
+
+.h-5 {
+  height: 5%;
+}
+
+.w-5 {
+  width: 5%;
+}
+
+.h-5-vh {
+  height: 5 vh;
+}
+
+.w-5-vw {
+  width: 5 vw;
+}
+
+.h-10 {
+  height: 10%;
+}
+
+.w-10 {
+  width: 10%;
+}
+
+.h-10-vh {
+  height: 10 vh;
+}
+
+.w-10-vw {
+  width: 10 vw;
+}
+
+.h-20 {
+  height: 20%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.h-20-vh {
+  height: 20 vh;
+}
+
+.w-20-vw {
+  width: 20 vw;
+}
+
+.h-25 {
+  height: 25%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.h-25-vh {
+  height: 25 vh;
+}
+
+.w-25-vw {
+  width: 25 vw;
+}
+
+.h-30 {
+  height: 30%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.h-30-vh {
+  height: 30 vh;
+}
+
+.w-30-vw {
+  width: 30 vw;
+}
+
+.h-33 {
+  height: 33%;
+}
+
+.w-33 {
+  width: 33%;
+}
+
+.h-33-vh {
+  height: 33 vh;
+}
+
+.w-33-vw {
+  width: 33 vw;
+}
+
+.h-40 {
+  height: 40%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.h-40-vh {
+  height: 40 vh;
+}
+
+.w-40-vw {
+  width: 40 vw;
+}
+
+.h-50 {
+  height: 50%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.h-50-vh {
+  height: 50 vh;
+}
+
+.w-50-vw {
+  width: 50 vw;
+}
+
+.h-60 {
+  height: 60%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.h-60-vh {
+  height: 60 vh;
+}
+
+.w-60-vw {
+  width: 60 vw;
+}
+
+.h-66 {
+  height: 66%;
+}
+
+.w-66 {
+  width: 66%;
+}
+
+.h-66-vh {
+  height: 66 vh;
+}
+
+.w-66-vw {
+  width: 66 vw;
+}
+
+.h-70 {
+  height: 70%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.h-70-vh {
+  height: 70 vh;
+}
+
+.w-70-vw {
+  width: 70 vw;
+}
+
+.h-75 {
+  height: 75%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.h-75-vh {
+  height: 75 vh;
+}
+
+.w-75-vw {
+  width: 75 vw;
+}
+
+.h-80 {
+  height: 80%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.h-80-vh {
+  height: 80 vh;
+}
+
+.w-80-vw {
+  width: 80 vw;
+}
+
+.h-90 {
+  height: 90%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.h-90-vh {
+  height: 90 vh;
+}
+
+.w-90-vw {
+  width: 90 vw;
+}
+
+.h-95 {
+  height: 95%;
+}
+
+.w-95 {
+  width: 95%;
+}
+
+.h-95-vh {
+  height: 95 vh;
+}
+
+.w-95-vw {
+  width: 95 vw;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.w-100, ul.timeline > li, ul.timeline {
+  width: 100%;
+}
+
+.h-100-vh {
+  height: 100 vh;
+}
+
+.w-100-vw {
+  width: 100 vw;
+}
+
+.h-1-em {
+  height: 1 em;
+}
+
+.h-1-em {
+  width: 1 em;
+}
+
+.h-2-em {
+  height: 2 em;
+}
+
+.h-2-em {
+  width: 2 em;
+}
+
+.h-3-em {
+  height: 3 em;
+}
+
+.h-3-em {
+  width: 3 em;
+}
+
+.h-4-em {
+  height: 4 em;
+}
+
+.h-4-em {
+  width: 4 em;
+}
+
+.h-5-em {
+  height: 5 em;
+}
+
+.h-5-em {
+  width: 5 em;
+}
+
+.h-6-em {
+  height: 6 em;
+}
+
+.h-6-em {
+  width: 6 em;
+}
+
+.h-7-em {
+  height: 7 em;
+}
+
+.h-7-em {
+  width: 7 em;
+}
+
+.h-8-em {
+  height: 8 em;
+}
+
+.h-8-em {
+  width: 8 em;
+}
+
+.h-9-em {
+  height: 9 em;
+}
+
+.h-9-em {
+  width: 9 em;
+}
+
+.h-10-em {
+  height: 10 em;
+}
+
+.h-10-em {
+  width: 10 em;
+}
+
+.h-11-em {
+  height: 11 em;
+}
+
+.h-11-em {
+  width: 11 em;
+}
+
+.h-12-em {
+  height: 12 em;
+}
+
+.h-12-em {
+  width: 12 em;
+}
+
+.h-13-em {
+  height: 13 em;
+}
+
+.h-13-em {
+  width: 13 em;
+}
+
+.h-14-em {
+  height: 14 em;
+}
+
+.h-14-em {
+  width: 14 em;
+}
+
+.h-15-em {
+  height: 15 em;
+}
+
+.h-15-em {
+  width: 15 em;
+}
+
+.h-16-em {
+  height: 16 em;
+}
+
+.h-16-em {
+  width: 16 em;
+}
+
+.h-17-em {
+  height: 17 em;
+}
+
+.h-17-em {
+  width: 17 em;
+}
+
+.h-18-em {
+  height: 18 em;
+}
+
+.h-18-em {
+  width: 18 em;
+}
+
+.h-19-em {
+  height: 19 em;
+}
+
+.h-19-em {
+  width: 19 em;
+}
+
+.h-20-em {
+  height: 20 em;
+}
+
+.h-20-em {
+  width: 20 em;
+}
+
+.fluid {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap {
+  width: max-content;
+  height: max-content;
+}
+
+.ml-xs {
+  margin-left: 0.25em;
+}
+
+.mr-xs {
+  margin-right: 0.25em;
+}
+
+.mt-xs {
+  margin-top: 0.25em;
+}
+
+.mb-xs {
+  margin-bottom: 0.25em;
+}
+
+.mx-xs {
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
+
+.my-xs {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.m-xs, .subsubtitle {
+  margin: 0.25em;
+}
+
+.pl-xs {
+  padding-left: 0.25em;
+}
+
+.pr-xs {
+  padding-right: 0.25em;
+}
+
+.pt-xs {
+  padding-top: 0.25em;
+}
+
+.pb-xs {
+  padding-bottom: 0.25em;
+}
+
+.px-xs {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.py-xs {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+.p-xs {
+  padding: 0.25em;
+}
+
+.ml-s {
+  margin-left: 0.5em;
+}
+
+.mr-s {
+  margin-right: 0.5em;
+}
+
+.mt-s {
+  margin-top: 0.5em;
+}
+
+.mb-s, ul.timeline > li > div.entry > h1 {
+  margin-bottom: 0.5em;
+}
+
+.mx-s {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.my-s, p, .contact > span, ul {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.m-s, .tile, .contact, .project, .skill, .subtitle {
+  margin: 0.5em;
+}
+
+.pl-s {
+  padding-left: 0.5em;
+}
+
+.pr-s {
+  padding-right: 0.5em;
+}
+
+.pt-s {
+  padding-top: 0.5em;
+}
+
+.pb-s {
+  padding-bottom: 0.5em;
+}
+
+.px-s {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.py-s {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.p-s {
+  padding: 0.5em;
+}
+
+.ml-m {
+  margin-left: 1em;
+}
+
+.mr-m {
+  margin-right: 1em;
+}
+
+.mt-m {
+  margin-top: 1em;
+}
+
+.mb-m {
+  margin-bottom: 1em;
+}
+
+.mx-m {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.my-m {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.m-m, a.title {
+  margin: 1em;
+}
+
+.pl-m {
+  padding-left: 1em;
+}
+
+.pr-m {
+  padding-right: 1em;
+}
+
+.pt-m {
+  padding-top: 1em;
+}
+
+.pb-m {
+  padding-bottom: 1em;
+}
+
+.px-m {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.py-m, ul.timeline {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.p-m {
+  padding: 1em;
+}
+
+.ml-l {
+  margin-left: 2em;
+}
+
+.mr-l {
+  margin-right: 2em;
+}
+
+.mt-l {
+  margin-top: 2em;
+}
+
+.mb-l {
+  margin-bottom: 2em;
+}
+
+.mx-l {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.my-l {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.m-l {
+  margin: 2em;
+}
+
+.pl-l {
+  padding-left: 2em;
+}
+
+.pr-l {
+  padding-right: 2em;
+}
+
+.pt-l {
+  padding-top: 2em;
+}
+
+.pb-l {
+  padding-bottom: 2em;
+}
+
+.px-l {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.py-l, ul.timeline > li {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.p-l, .tile, .contact, .project, .skill {
+  padding: 2em;
+}
+
+.ml-xl {
+  margin-left: 4em;
+}
+
+.mr-xl {
+  margin-right: 4em;
+}
+
+.mt-xl {
+  margin-top: 4em;
+}
+
+.mb-xl {
+  margin-bottom: 4em;
+}
+
+.mx-xl {
+  margin-left: 4em;
+  margin-right: 4em;
+}
+
+.my-xl {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+.m-xl {
+  margin: 4em;
+}
+
+.pl-xl {
+  padding-left: 4em;
+}
+
+.pr-xl {
+  padding-right: 4em;
+}
+
+.pt-xl {
+  padding-top: 4em;
+}
+
+.pb-xl {
+  padding-bottom: 4em;
+}
+
+.px-xl {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+.py-xl {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.p-xl, section {
+  padding: 4em;
+}
+
+.monospace, li, .subsubtitle, .subtitle, a.title, main #ls-command *, main #shell *, .monospace > *, li > *, .subsubtitle > *, .subtitle > *, a.title > * {
+  font-family: "Roboto Mono", monospace;
+}
+
+.sans, *, .sans > * {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
+}
+
+.bold, .subsubtitle {
+  font-weight: bold;
+}
+
+.bolder, .subtitle, a.title, main #ls-output *, main #ls-command *, main #shell * {
+  font-weight: 900;
+}
+
+.pre {
+  white-space: pre;
+}
+
+.blue {
+  color: #68E;
+}
+
+.green {
+  color: #5F5;
+}
+
+.dark-red {
+  color: #C22;
+}
+
+.gold {
+  color: #B60;
+}
+
+.dark-green {
+  color: #1A1;
+}
+
+.white, main #ls-output * {
+  color: #DDD;
+}
+
+.black, * {
+  color: #333;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@keyframes bg-blur {
+  0% {
+    filter: blur(8px);
+  }
+  50% {
+    filter: blur(3px);
+  }
+  100% {
+    filter: blur(8px);
+  }
+}
+@keyframes bg-shift {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+@keyframes bg-gradient {
+  0% {
+    background-color: #104D;
+  }
+  50% {
+    background-color: #401D;
+  }
+  100% {
+    background-color: #104D;
+  }
+}
+@keyframes glitch {
+  70% {
+    transform: none;
+    filter: none;
+  }
+  72% {
+    transform: none;
+    filter: invert(1);
+  }
+  73% {
+    transform: translateX(5vw) scale(1.25, 0.8);
+    filter: invert(1);
+  }
+  74% {
+    transform: translateX(-10vw) translateY(-5vh) skew(5deg, -5deg) scale(1.5, 0.6);
+    filter: invert(1);
+  }
+  75% {
+    transform: translateX(5vw) translateY(2.5vh) scale(1.25, 0.8);
+    filter: invert(1);
+  }
+  76% {
+    transform: none;
+    filter: none;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.blink {
+  animation: blink 1s linear infinite;
+}
+
+.bg {
+  background-size: cover;
+  content: "";
+  display: block;
+  height: 105vh;
+  left: -0.5rem;
+  overflow-x: hidden;
+  position: fixed;
+  right: 0;
+  top: -0.5rem;
+  width: 105vw;
+  z-index: -1;
+}
+
+.bg.anime {
+  filter: blur(4px);
+  background-image: url("anime_wallpaper.jpg");
+  background-color: #000000;
+}
+
+.bg.gradient {
+  animation: bg-shift 5s ease infinite;
+  background-image: linear-gradient(-45deg, #401D, #104D);
+  background-size: 400% 400%;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+main .glitch {
+  animation: glitch 3s step-start infinite;
+}
+main #ls-command, main #shell {
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+main #ls-command *, main #shell * {
+  font-size: 4vw;
+}
+main #ls-output * {
+  font-size: 2.5vw;
+}
+
+.hover-red:hover {
+  color: #EE6666 !important;
+}
+
+.hover-blue:hover {
+  color: #6699EE !important;
+}
+
+.fa-mono, main #ls-output * {
+  font-family: "FontAwesome", "Roboto Mono", monospace;
+}
+
+.fa-serif, .contact > .contact-icon {
+  font-family: "FontAwesome", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
+}
+
+@media screen and (orientation: landscape) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    width: 100%;
+    height: calc(4vw + 1rem);
+    position: sticky;
+    top: 0;
+    overflow: visible;
+    z-index: 1;
+  }
+  nav.gradient {
+    animation: bg-gradient 5s ease infinite;
+  }
+  nav a {
+    font-family: "Roboto Mono", monospace;
+    color: #BBB8;
+    font-size: 1.5vw;
+    font-weight: 500;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    text-decoration: none;
+  }
+  nav a:hover {
+    font-size: 1.7vw;
+    color: #F33 !important;
+    font-weight: 900;
+  }
+  nav a.active {
+    font-size: 1.6vw;
+    color: #EEE;
+    font-weight: 900;
+  }
+}
+@media screen and (orientation: portrait) {
+  nav {
+    display: none;
+  }
+}
+section {
+  width: 100%;
+}
+
+section:nth-child(2n), ul.timeline > li:nth-child(2n) {
+  background-color: #FFF9;
+}
+section:nth-child(2n):hover, ul.timeline > li:nth-child(2n):hover {
+  background-color: #FFFA;
+}
+
+section:nth-child(2n+1), ul.timeline > li:nth-child(2n+1) {
+  background-color: #EEE9;
+}
+section:nth-child(2n+1):hover, ul.timeline > li:nth-child(2n+1):hover {
+  background-color: #FFFA;
+}
+
+a.title {
+  font-size: calc(1vw + 2.5rem);
+  text-decoration: none;
+}
+a.title:hover {
+  color: #C33;
+}
+
+.subtitle {
+  font-size: calc(0.75vw + 1.75rem);
+  text-align: center;
+}
+
+.subsubtitle {
+  font-size: calc(0.25vw + 1rem);
+  text-align: center;
+  color: #555D;
+}
+
+p, .contact > span, ul {
+  font-size: calc(0.25vw + 1.25rem);
+}
+p.small, .contact > span.small, ul.small {
+  font-size: calc(0.25vw + 1rem);
+}
+
+.tile, .contact, .project, .skill {
+  background-color: #FFF4;
+}
+
+.tile:hover, .contact:hover, .project:hover, .skill:hover {
+  background-color: #FFF9;
+}
+
+.skill {
+  width: max(30%, 20rem);
+}
+.skill > ul {
+  width: max-content;
+  font-size: calc(0.5vw + 1.25rem);
+}
+
+.project {
+  width: max(30%, 20rem);
+}
+.project, .project * {
+  text-decoration: none;
+  color: black;
+}
+.project:hover, .project:hover * {
+  color: #822;
+}
+.project p, .project .contact > span {
+  font-size: calc(0.25vw + 1rem);
+}
+
+.contact {
+  width: max(30%, 20rem);
+}
+.contact, .contact * {
+  text-decoration: none;
+  color: black;
+}
+.contact:hover, .contact:hover * {
+  color: #822;
+}
+.contact > .contact-icon {
+  justify-content: center;
+  height: calc(0.5vw + 1.75em);
+  width: calc(0.5vw + 1.75em);
+  font-size: calc(1.5vw + 1.5rem);
+  border: 0.1em solid black;
+  border-radius: 50%;
+}
+.contact:hover > .contact-icon {
+  border-color: #822;
+}
+
+ul.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.timeline::before {
+  background-color: #FFFB;
+  content: "";
+  position: absolute;
+  width: 0.5rem;
+  height: 105%;
+  left: 0;
+  right: 0;
+  top: -2.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+ul.timeline > li {
+  flex-wrap: nowrap;
+}
+ul.timeline > li::before {
+  background-color: #DDDC;
+  border: 0.25rem solid #FFFC;
+  border-radius: 50%;
+  content: "";
+  height: 0.75rem;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  right: 0;
+  width: 0.75rem;
+  z-index: 1;
+}
+ul.timeline > li:hover::before {
+  background-color: #DDDF;
+  border: 0.25rem solid #FFFF;
+}
+ul.timeline > li > div.time {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+ul.timeline > li > div.time > h1 {
+  color: #444C;
+  font-size: calc(0.25vw + 1.5rem);
+}
+ul.timeline > li > div.entry {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+ul.timeline > li > div.entry > h1 {
+  color: #111C;
+  font-size: calc(0.5vw + 1.5rem);
+}
+ul.timeline > li > div.entry > h2 {
+  color: #666C;
+  font-size: calc(0.25vw + 1.25rem);
+}
+
+.sentinel {
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+}
+
+/*# sourceMappingURL=style.css.map */
