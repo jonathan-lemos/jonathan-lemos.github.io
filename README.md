@@ -1,2 +1,2 @@
 # jonathan-lemos.github.io
-My personal website. No jQuery, no problem!
+My personal website. Made in pure HTML/SASS/Typescript.

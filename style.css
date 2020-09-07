@@ -1004,10 +1004,10 @@ main #ls-command, main #shell {
   align-items: stretch;
 }
 main #ls-command *, main #shell * {
-  font-size: 4vw;
+  font-size: calc(1.25rem + 3.5vw);
 }
 main #ls-output * {
-  font-size: 2.5vw;
+  font-size: calc(1rem + 2vw);
 }
 
 .hover-red:hover {
